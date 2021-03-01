@@ -74,6 +74,8 @@ Confirm that once you have filtered for these characteristics you are left with 
 nrow(nobel_living)
 ```
 
+#answer ex2
+
 
 ## Most living Nobel laureates were based in the US when they won their prizes
 

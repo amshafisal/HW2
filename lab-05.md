@@ -70,6 +70,8 @@ nrow(nobel_living)
 
     ## [1] 935
 
+\#answer ex2
+
 ## Most living Nobel laureates were based in the US when they won their prizes
 
 Get the code from the Lab document
