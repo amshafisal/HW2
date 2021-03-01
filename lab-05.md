@@ -1,9 +1,9 @@
 Lab 05 - Nobel laureates
 ================
 
-Team Name:
+Name:amshafisal
 
-Team Members - Name and Student ID
+Student ID:2201000180
 
 1.  
 2.  
