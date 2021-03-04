@@ -79,9 +79,14 @@ Get the code from the Lab document
 Next, we will limit our analysis to only the following categories:
 Physics, Medicine, Chemistry, and Economics.
 
-Knit, *commit, and push your changes to GitHub with an appropriate
-commit message. Make sure to commit and push all changed files so that
-your Git pane is cleared up afterwards.d*
+``` r
+ggplot(nobel_living_science<-nobel_living%>%filter(category %in% c('Physics', 'Medicine', 'Chemistry', 'Economics')))
+```
+
+![](lab-05_files/figure-gfm/unnamed-chunk-5-1.png)<!-- --> Knit,
+*commit, and push your changes to GitHub with an appropriate commit
+message. Make sure to commit and push all changed files so that your Git
+pane is cleared up afterwards.d*
 
 1.  Create a faceted bar plot visualizing the relationship between the
     category of prize and whether the laureate was in the US when they
@@ -92,12 +97,15 @@ your Git pane is cleared up afterwards.d*
     -   For each facet you should have two bars, one for winners in the
         US and one for Other.
     -   Flip the coordinates so the bars are horizontal, not vertical.
+        \#answer ex3 The ratio of the values ​​in the chart are equal
+        between each other, but varying in terms of data in the sense of
+        physics, which is the first in NA, USA, Other
 
-Knit, *commit, and push your changes to GitHub with an appropriate
-commit message. Make sure to commit and push all changed files so that
-your Git pane is cleared up afterwards.d*
+``` r
+nobel_living_science%>%ggplot(aes(x = country_us,y =category, fill = category)) + geom_bar(stat = 'identity', position = 'dodge', orientation = 'horizontal')
+```
 
-## But of those US-based Nobel laureates, many were born in other countries
+![](lab-05_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 1.  Create a new variable called `born_country_us` that has the value
     `"USA"` if the laureate is born in the US, and `"Other"` otherwise.
