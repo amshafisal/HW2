@@ -100,9 +100,15 @@ Knit, *commit, and push your changes to GitHub with an appropriate commit messag
     -   For each facet you should have two bars, one for winners in the US and one for Other.
     -   Flip the coordinates so the bars are horizontal, not vertical.
 #answer ex3
-The ratio of the values ​​in the chart are equal between each other, but varying in terms of data in the sense of physics, which is the first in NA, USA, Other
+
 ```{r}
-nobel_living_science%>%ggplot(aes(x = country_us,y =category, fill = category)) + geom_bar(stat = 'identity', position = 'dodge', orientation = 'horizontal')
+nobel_living_science %>%
+
+ggplot(aes(x = country_us,y=category, fill =category)) +
+
+geom_bar(stat = "identity", position = "dodge") +
+
+coord_flip()
 ```
 
 4.  Create a new variable called `born_country_us` that has the value `"USA"` if the laureate is born in the US, and `"Other"` otherwise.
@@ -110,7 +116,6 @@ nobel_living_science%>%ggplot(aes(x = country_us,y =category, fill = category)) 
 
 
 ```{r}
-
 ```
 
 Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.d*
