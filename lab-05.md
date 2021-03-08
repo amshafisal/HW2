@@ -97,7 +97,7 @@ pane is cleared up afterwards.d*
     -   For each facet you should have two bars, one for winners in the
         US and one for Other.
     -   Flip the coordinates so the bars are horizontal, not vertical.
-        \#answer ex3
+        \#answer EX3
 
 ``` r
 nobel_living_science %>%
